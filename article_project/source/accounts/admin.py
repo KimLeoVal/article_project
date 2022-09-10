@@ -3,7 +3,7 @@ from django.contrib import admin
 # Register your models here.
 from django.contrib.auth import get_user_model
 
-from accounts.models import Profile
+from .models import Profile
 
 
 class ProfileInline(admin.StackedInline):

@@ -7,8 +7,8 @@ from django.urls import reverse_lazy
 # Create your views here.
 from django.utils.http import urlencode
 
-from webapp.forms import ArticleForm, SearchForm, ArticleDeleteForm, UserArticleForm
-from webapp.models import Article
+from ..forms import ArticleForm, SearchForm, ArticleDeleteForm, UserArticleForm
+from ..models import Article
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 
 

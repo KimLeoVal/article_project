@@ -6,8 +6,8 @@ from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.views.generic import CreateView, DetailView, UpdateView
 
-from accounts.forms import MyUserCreationForm, UserChangeForm, ProfileChangeForm, PasswordChangeForm
-from accounts.models import Profile
+from .forms import MyUserCreationForm, UserChangeForm, ProfileChangeForm, PasswordChangeForm
+from .models import Profile
 
 User = get_user_model()
 

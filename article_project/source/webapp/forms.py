@@ -1,7 +1,7 @@
 from django import forms
 from django.core.exceptions import ValidationError
 from django.forms import widgets
-from webapp.models import Article, Comment
+from .models import Article, Comment
 
 
 class UserArticleForm(forms.ModelForm):

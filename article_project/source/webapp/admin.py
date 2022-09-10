@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from webapp.models import Article, Tag, Comment
+from .models import Article, Tag, Comment
 
 
 class ArticleAdmin(admin.ModelAdmin):

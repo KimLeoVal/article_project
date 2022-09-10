@@ -4,7 +4,7 @@ from django.db import models
 # Create your models here.
 from django.urls import reverse
 
-from webapp.validate import validate_title
+
 
 
 class BaseModel(models.Model):
@@ -21,6 +21,7 @@ class Article(BaseModel):
     tags = models.ManyToManyField("webapp.Tag", related_name="articles", blank=True)
     author = models.ForeignKey(get_user_model(), related_name="articles", verbose_name="Автор", default=1,
                                on_delete=models.SET_DEFAULT)
+    user = models.ManyToManyField(get_user_model(), related_name='articles_user', verbose_name='Пользователь')
 
     def __str__(self):
         return f"{self.id}. {self.title}: {self.author.username}"
