@@ -1,11 +1,13 @@
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.contrib.auth.models import Permission
 from django.db.models import Q
+from django.http import JsonResponse
 from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse_lazy
 
 # Create your views here.
 from django.utils.http import urlencode
+from django.views import View
 
 from ..forms import ArticleForm, SearchForm, ArticleDeleteForm, UserArticleForm
 from ..models import Article
@@ -37,10 +39,12 @@ class IndexView(ListView):
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(object_list=object_list, **kwargs)
         context["form"] = self.form
+
         if self.search_value:
             query = urlencode({'search': self.search_value})  # search=dcsdvsdvsd
             context['query'] = query
             context['search'] = self.search_value
+
         return context
 
     def get_search_form(self):
@@ -105,3 +109,18 @@ class DeleteArticle(PermissionRequiredMixin, DeleteView):
             return self.delete(request, *args, **kwargs)
         else:
             return self.get(request, *args, **kwargs)
+
+class CreateLike(View):
+    def get(self, request, *args, **kwargs):
+        pk=kwargs.get('pk')
+        article=get_object_or_404(Article,pk=pk)
+        user = self.request.user
+        if article.user.filter(id=user.pk):
+            article.user.remove(user.pk)
+        else:
+            article.user.add(user)
+        likes=len(article.user.all())
+        param={'likes':likes}
+
+
+        return JsonResponse(param)
