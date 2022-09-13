@@ -1,14 +1,63 @@
 [
 {
   "model": "webapp.article",
+  "pk": 1,
+  "fields": {
+    "created_at": "2022-09-10T11:12:38.016Z",
+    "updated_at": "2022-09-10T11:12:38.016Z",
+    "title": "test1",
+    "content": "test1test1",
+    "author": 1,
+    "tags": [],
+    "user": [
+      1,
+      5
+    ]
+  }
+},
+{
+  "model": "webapp.article",
+  "pk": 2,
+  "fields": {
+    "created_at": "2022-09-10T15:28:54.732Z",
+    "updated_at": "2022-09-10T15:28:54.732Z",
+    "title": "test2",
+    "content": "test2test2",
+    "author": 1,
+    "tags": [],
+    "user": [
+      1,
+      5
+    ]
+  }
+},
+{
+  "model": "webapp.article",
+  "pk": 3,
+  "fields": {
+    "created_at": "2022-09-10T15:29:13.673Z",
+    "updated_at": "2022-09-10T15:29:13.673Z",
+    "title": "test3",
+    "content": "test3test3test3",
+    "author": 1,
+    "tags": [],
+    "user": [
+      1,
+      5
+    ]
+  }
+},
+{
+  "model": "webapp.article",
   "pk": 26,
   "fields": {
     "created_at": "2022-07-15T11:48:02.141Z",
     "updated_at": "2022-07-27T14:23:02.300Z",
-    "title": "РЎС‚Р°С‚СЊСЏ5",
-    "content": "РљРѕРЅС‚РµРЅС‚5",
+    "title": "Статья5",
+    "content": "Контент5",
     "author": 1,
-    "tags": []
+    "tags": [],
+    "user": []
   }
 },
 {
@@ -17,10 +66,11 @@
   "fields": {
     "created_at": "2022-07-19T14:18:13.448Z",
     "updated_at": "2022-07-27T14:23:02.301Z",
-    "title": "РЎС‚Р°С‚СЊСЏ6",
-    "content": "РљРѕРЅС‚РµРЅС‚6",
+    "title": "Статья6",
+    "content": "Контент6",
     "author": 1,
-    "tags": []
+    "tags": [],
+    "user": []
   }
 },
 {
@@ -29,10 +79,11 @@
   "fields": {
     "created_at": "2022-07-19T14:18:32.797Z",
     "updated_at": "2022-07-27T14:23:02.303Z",
-    "title": "РЎС‚Р°С‚СЊСЏ7",
-    "content": "РљРѕРЅС‚РµРЅС‚7",
+    "title": "Статья7",
+    "content": "Контент7",
     "author": 1,
-    "tags": []
+    "tags": [],
+    "user": []
   }
 },
 {
@@ -44,7 +95,8 @@
     "title": "Articl1",
     "content": "vsdvds",
     "author": 1,
-    "tags": []
+    "tags": [],
+    "user": []
   }
 },
 {
@@ -56,7 +108,8 @@
     "title": "Articl2",
     "content": "vdfvfs",
     "author": 1,
-    "tags": []
+    "tags": [],
+    "user": []
   }
 },
 {
@@ -68,7 +121,8 @@
     "title": "Articl3",
     "content": "cdscds",
     "author": 1,
-    "tags": []
+    "tags": [],
+    "user": []
   }
 },
 {
@@ -80,7 +134,8 @@
     "title": "ggggg",
     "content": "gggggg",
     "author": 1,
-    "tags": []
+    "tags": [],
+    "user": []
   }
 },
 {
@@ -92,7 +147,8 @@
     "title": "vdsvds",
     "content": "vdsvdsvds",
     "author": 1,
-    "tags": []
+    "tags": [],
+    "user": []
   }
 },
 {
@@ -104,7 +160,8 @@
     "title": "gergre",
     "content": "greger",
     "author": 1,
-    "tags": []
+    "tags": [],
+    "user": []
   }
 },
 {
@@ -116,7 +173,8 @@
     "title": "gergre",
     "content": "gregerger",
     "author": 1,
-    "tags": []
+    "tags": [],
+    "user": []
   }
 },
 {
@@ -128,7 +186,8 @@
     "title": "test article",
     "content": "dfbdfbfd",
     "author": 1,
-    "tags": []
+    "tags": [],
+    "user": []
   }
 },
 {
@@ -140,7 +199,8 @@
     "title": "fefewfew",
     "content": "fwe",
     "author": 1,
-    "tags": []
+    "tags": [],
+    "user": []
   }
 },
 {
@@ -152,7 +212,8 @@
     "title": "vsdvds",
     "content": "vds",
     "author": 1,
-    "tags": []
+    "tags": [],
+    "user": []
   }
 },
 {
@@ -166,7 +227,8 @@
     "author": 1,
     "tags": [
       7
-    ]
+    ],
+    "user": []
   }
 },
 {
@@ -180,6 +242,9 @@
     "author": 1,
     "tags": [
       7
+    ],
+    "user": [
+      5
     ]
   }
 },
@@ -194,6 +259,27 @@
     "author": 2,
     "tags": [
       7
+    ],
+    "user": [
+      5
+    ]
+  }
+},
+{
+  "model": "webapp.article",
+  "pk": 47,
+  "fields": {
+    "created_at": "2022-09-10T17:12:29.751Z",
+    "updated_at": "2022-09-10T17:12:29.751Z",
+    "title": "Like",
+    "content": "testlike",
+    "author": 1,
+    "tags": [
+      7
+    ],
+    "user": [
+      1,
+      5
     ]
   }
 },
@@ -205,7 +291,51 @@
     "updated_at": "2022-08-09T15:09:06.630Z",
     "text": "vrfdvfdvdfvdf",
     "author": 1,
-    "article": 46
+    "article": 46,
+    "user": []
+  }
+},
+{
+  "model": "webapp.comment",
+  "pk": 2,
+  "fields": {
+    "created_at": "2022-09-10T15:29:41.031Z",
+    "updated_at": "2022-09-10T15:29:41.031Z",
+    "text": "comment1",
+    "author": 1,
+    "article": 1,
+    "user": [
+      1
+    ]
+  }
+},
+{
+  "model": "webapp.comment",
+  "pk": 3,
+  "fields": {
+    "created_at": "2022-09-10T15:30:00.313Z",
+    "updated_at": "2022-09-10T15:30:00.313Z",
+    "text": "comment2",
+    "author": 1,
+    "article": 1,
+    "user": [
+      1
+    ]
+  }
+},
+{
+  "model": "webapp.comment",
+  "pk": 4,
+  "fields": {
+    "created_at": "2022-09-10T17:12:48.712Z",
+    "updated_at": "2022-09-10T17:12:48.713Z",
+    "text": "musicmusicmusic",
+    "author": 1,
+    "article": 47,
+    "user": [
+      1,
+      5
+    ]
   }
 },
 {
@@ -214,7 +344,7 @@
   "fields": {
     "created_at": "2022-07-15T11:46:39.007Z",
     "updated_at": "2022-07-15T11:46:39.007Z",
-    "name": "РњСѓР·С‹РєР°"
+    "name": "Музыка"
   }
 },
 {
@@ -223,7 +353,7 @@
   "fields": {
     "created_at": "2022-07-15T11:46:45.652Z",
     "updated_at": "2022-07-15T11:46:45.653Z",
-    "name": "РЎРїРѕСЂС‚"
+    "name": "Спорт"
   }
 },
 {
@@ -232,7 +362,7 @@
   "fields": {
     "created_at": "2022-07-15T11:46:52.245Z",
     "updated_at": "2022-07-15T11:46:52.245Z",
-    "name": "Р¤РёР»СЊРјС‹"
+    "name": "Фильмы"
   }
 }
 ]
