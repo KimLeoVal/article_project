@@ -49,13 +49,16 @@ class DeleteComment(DeleteView):
 class CreateLikeComment(View):
     def get(self, request, *args, **kwargs):
         pk = kwargs.get('pk')
-        article = get_object_or_404(Article, pk=pk)
+        print(pk)
+        comment = get_object_or_404(Comment, pk=pk)
+        print(comment)
         user = self.request.user
-        if article.user.filter(id=user.pk):
-            article.user.remove(user.pk)
+        if comment.user.filter(id=user.pk):
+            print(comment.user.filter(id=user.pk))
+            comment.user.remove(user.pk)
         else:
-            article.user.add(user)
-        likes = len(article.user.all())
+            comment.user.add(user)
+        likes = len(comment.user.all())
         param = {'likes': likes}
 
         return JsonResponse(param)
