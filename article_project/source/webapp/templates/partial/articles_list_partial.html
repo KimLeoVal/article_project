@@ -17,12 +17,12 @@
                     <p style="margin-right: auto" id="likes_p-{{ article.id }}" data-pk="{{ article.id }}">
                         Лайков: {{ article.user.all|length }} </p>
                     {% if request.user in article.user.all %}
-                        <button id="like{{ forloop.counter }}" class="btn_like" data-pk="{{ article.id }}"
+                        <button id="like{{ forloop.counter }}" class="btn_like" data-pk="{% url 'webapp:CreateLike' article.pk %}"
                                 style="width: 100px; height: 75px; ">dislike
                         </button>
                     {% endif %}
                     {% if request.user not in article.user.all %}
-                        <button id="like{{ forloop.counter }}" class="btn_like" data-pk="{{ article.id }}"
+                        <button id="like{{ forloop.counter }}" class="btn_like" data-pk="{% url 'webapp:CreateLike' article.pk %}"
                                 style="width: 100px; height: 75px; ">like
                         </button>
                     {% endif %}
@@ -48,15 +48,15 @@
     async function changeButton(id, event)
     {
         console.log('target: ', event.target);
-        let pk = await event.target.dataset['pk'];
-        console.log(pk)
+        let url = await event.target.dataset['pk'];
+        console.log(url)
 
-        let response = await fetch(`http://localhost:8000/articles/${pk}/like   `)
+        let response = await fetch(url)
         let data = await response.json()
         console.log(data)
         let likes = data['likes']
         console.log(likes)
-        let likes_p = document.getElementById(`likes_p-${pk}`)
+        let likes_p = document.getElementById(`likes_p-${data.pk}`)
         likes_p.innerText = 'Лайков: '+likes
         let button = await document.getElementById(id)
 

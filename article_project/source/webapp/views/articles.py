@@ -116,11 +116,11 @@ class CreateLike(View):
         article=get_object_or_404(Article,pk=pk)
         user = self.request.user
         if article.user.filter(id=user.pk):
-            article.user.remove(user.pk)
+            article.user.remove(user)
         else:
             article.user.add(user)
         likes=len(article.user.all())
-        param={'likes':likes}
+        param={'likes':likes, 'pk': article.pk}
 
 
         return JsonResponse(param)
